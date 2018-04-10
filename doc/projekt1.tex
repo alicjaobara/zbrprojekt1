@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,polish]{babel}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\frenchspacing
+%\usepackage{indentfirst} % wciecia w akapitach po \\
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,%
+	bindingoffset=0mm, top=2.5cm, bottom=2.5cm}
+
+\usepackage{enumerate} %pakiet aby wybierać oznaczenia w wypunktowaniu enumerate
+
+
+\begin{document}
+	\renewcommand{\*}{\cdot}
+	\renewcommand{\phi}{\varphi}
+	\begin{titlepage}
+		\author{Alicja Obara}
+		\title{Projekt 1}
+		\maketitle
+	\end{titlepage}
+	
+	\section{Założenia projektu}
+	Celem projektu było stworzenie wizualizacji ruchu punktu TCP podanego mechanizmu robota o strukturze kinematycznej {CR, BR1, BR2, BL, CL, AL }, budowie i parametrach geometrycznych omówionych na wykładzie.
+	\begin{enumerate}
+		\item wybór wartości parametrów geometrycznych części regionalnej mechanizmu: 
+		\begin{enumerate}
+			\item l1 [mm],
+			\item l2 [mm],
+			\item l3 [mm],
+			\item d [mm],
+			\item e [mm],
+		\end{enumerate}
+		\item wybór wartości parametrów geometrycznych części lokalnej mechanizmu:
+		\begin{enumerate}
+			\item l4 [mm],
+			\item l5 [mm],
+			\item l6 [mm],
+		\end{enumerate}
+		\item ustawienie wektora podejścia członów części lokalnej mechanizmu:
+		\begin{enumerate}
+			\item $\theta$ [stpn],
+			\item $\psi$ [stpn],
+		\end{enumerate}
+		\item wybór punktu startowego i końcowego trajektorii ruchu z zadaną liczbą równooddalonych punktów podporowych przejścia,
+		\begin{enumerate}
+			\item punkt startowy,
+			\item punkt końcowy,
+			\item liczba kroków,
+		\end{enumerate}
+		\item wybór punktu startowego i końcowego trajektorii ruchu z żądaniem interpolowanego liniowo lub funkcyjnie przejścia pomiędzy zadanymi punktami,
+		\item sprawdzenie warunków bezpiecznego przejścia pomiędzy zadanymi punktami,
+		\item podanie przebiegu współrzędnych maszynowych-wartości zadanych sterowników-regulatorów położenia, wymuszających zadane przejście: $\phi_1, \phi_2, \phi_3, \phi_4, \phi_5$
+		\item wprowadzenie kryteriów wyboru sposobu realizacji ruchu-przemieszczeń członów mechanizmu po zadanej trajektorii: $\delta_1, \delta_2, \delta_3$
+	\end{enumerate}
+	\section{Obliczenia}
+	Przyjmuję oznaczenia: $St=\sin(\theta), Ct=\cos(\theta), Sp=\sin(\psi), Cp=\cos(\psi)$ \\
+	 oraz $S1=\sin(\phi1), C1=\cos(\phi1), S12=\sin(\phi1+\phi2)$
+	
+	
+	$x_P=x_T-l\*Ct\*Cp$
+	$y_P=y_T-l\*Ct\*Sp$
+	$z_P=z_T-l\*St$
+	
+	
+	\section{Wykresy}
+	
+	\section{Kod}
+\end{document}
